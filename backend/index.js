@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express=require('express');
 const mongoose= require('mongoose');
 var cors = require("cors");
@@ -103,6 +104,13 @@ app.get('/',function(req,res){
 
 // listening port
 const PORT=process.env.PORT||3000;
-app.listen(PORT,()=>{
-    console.log(`Listening on port ${PORT}`);
-});
+app.listen(PORT,async()=>{
+    try{
+       console.log(`Listening on port ${PORT}`);
+    }catch(err){
+        console.log("Error while connecting To server");
+        console.log(err);
+    }
+    
+console.log(`Server is running on port ${PORT}`);
+})

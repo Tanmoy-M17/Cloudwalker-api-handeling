@@ -65,7 +65,7 @@ for installing the above packages you have to run the below command
 
 ## Running the project
 
-    $ yarn start
+    $ npm run server
 
 ## Simple build for production
 
